@@ -84,30 +84,33 @@
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 100vh;
+    height: 100vw; /* set height to fill screen */
     overflow-x: hidden;
     position: absolute;
     top: 100%;
     left: 50%;
   }
+  .wrapper {
+    width: 100vw; /* set width to fill screen */
+    height: 100vh; /* set height to fill screen */
+    transform: translate(-50%, 0%); /* adjust translate for new height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 70vw;
+    height: 70vh; /* increase height */
+    font-size: 12px; /* reduce font size */
+  }
+  i {
+    font-size: 30em; /* reduce icon size */
+  }
+  .counter {
+    font-size: 2em; /* reduce counter text size */
+  }
 }
-      @media screen and (max-width: 768px) {
-        .wrapper {
-          width: 90vw;
-          flex-wrap: wrap;
-          gap: 30px;
-        }
-        .container {
-          width: calc(100% - 40px);
-          height: 35vw;
-          font-size: 14px;
-        }
-        i {
-          font-size: 40em;
-        }
-        .counter {
-          font-size: 2em;
-        }
-      }
     </style>
   </head>
   <body>
